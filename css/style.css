@@ -1,1 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,200;1,300;1,400&display=swap");
 
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  height: auto;
+  background-color: #020007f2;
+  color: #b5b3b6bf;
+}
+
+/* home page  */
+
+.movies_container {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1em;
+  display: flex;
+  overflow-x: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* for chrome */
+.movies_container::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  min-width: 175px;
+  max-width: 175px;
+  height: 220px;
+  background-color: #020007f2;
+  border-radius: 12px;
+  margin: 1em 1em 1em 0;
+  border: 1px solid #ffffff7a;
+}
+
+.card .img {
+  width: 100%;
+  height: 100%;
+}
+
+.card .img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.heading {
+  margin: 1em 0;
+  font-weight: 500;
+  color: #ffffffc4;
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  padding: 2em 0;
+}
+
+footer p {
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  margin: 0 !important;
+}
+
+a {
+  text-decoration: none;
+  color: #ffff;
+}
+
+/* movie details */
+
+.movie_details_row {
+  display: flex;
+  width: 100%;
+  height: auto;
+}
+
+.movie_details_col {
+  width: 50%;
+  padding: 1em;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.movie_details_col.img {
+  height: 300px;
+}
+
+.movie_details_col.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movie_details_col.content h2 {
+  color: aliceblue;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+input.checked[type="radio"] {
+  visibility: hidden;
+}
+
+label.lbl {
+  position: relative;
+  border: 1px solid #fff;
+  padding: 4px;
+  font-size: 12px;
+}
+
+input.checked[type="radio"]:checked + label.lbl {
+  background-color: #fff;
+  color: #111;
+}
+
+.load,
+.book {
+  background: transparent;
+  border: none;
+  padding: 5px;
+  background-color: #fff;
+  color: #111;
+}
+
+.hidden {
+  display: none !important;
+}
+
+input.seat[type="checkbox"] {
+  display: none;
+}
+
+label.lbl2 {
+  position: relative;
+  border: 1px solid #fff;
+  padding: 7px;
+  margin: 5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+input.seat_filled[type="checkbox"] + label.lbl2 {
+  background-color: red;
+}
+
+input.seat[type="checkbox"]:checked + label.lbl2 {
+  background-color: #fff;
+  color: #111;
+}
+
+input.seat_filled[type="checkbox"]:checked + label.lbl2 {
+  background-color: red;
+}
+
+.tickets_container {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1em;
+  display: flex;
+  overflow-x: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  cursor: pointer;
+}
+
+.ticket {
+  margin: 1em;
+  min-width: 200px;
+  max-width: 220px;
+  height: auto;
+  background-color: #c5c5c5;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.ticket .movie_name {
+  border-top-left-radius: 8px;
+  border-right: 0.18em dashed #0f0b13;
+  background-color: orangered;
+  padding: 0.5em;
+}
+
+.ticket .content {
+  width: 100%;
+  height: auto;
+  padding: 0.5em;
+  border-right: 0.28em dashed #0f0b13;
+  color: #0f0b13;
+}
+
+.ticket .content p {
+  margin: 0;
+}
+
+.tickets_container::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-item {
+  height: 400px !important;
+}
+
+.carousel-item iframe {
+  height: 100% !important;
+  object-fit: cover !important;
+}
+
+@media screen and (max-width: 800px) {
+  .movie_details_row {
+    flex-direction: column;
+  }
+  .movie_details_col {
+    width: 100%;
+  }
+  .movie_details_col.img {
+    height: 200px;
+  }
+  label.lbl2 {
+    padding: 6px;
+    margin: 3px;
+  }
+  .carousel-item {
+    height: 300px !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .movie_details_row {
+    flex-direction: column;
+  }
+  .movie_details_col {
+    width: 100%;
+  }
+  .movie_details_col.img {
+    height: 200px;
+  }
+  label.lbl2 {
+    padding: 4px;
+    margin: 2px;
+  }
+  .carousel-item {
+    height: 200px !important;
+  }
+}
